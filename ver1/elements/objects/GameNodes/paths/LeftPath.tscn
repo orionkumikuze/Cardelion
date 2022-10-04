@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="QuadMesh" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 0.52, 0.52 )
+
+[node name="Left" type="MeshInstance2D"]
+position = Vector2( -357, 0 )
+scale = Vector2( 50, 50 )
+mesh = SubResource( 2 )
+
+[node name="LeftMoveArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftMoveArea"]
+position = Vector2( 0, 0.0199999 )
+shape = SubResource( 3 )
